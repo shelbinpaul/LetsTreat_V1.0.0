@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen">
+
+    <RelativeLayout
+        android:id="@+id/TableLayout_Searchbox"
+        android:layout_width="match_parent"
+        android:background="@color/background_cardview"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="200dp"
+        >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rectangle_edittext"
+            android:hint="Search"
+            android:ems="10" >
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Banglore"
+            android:id="@+id/textView"
+            android:layout_above="@+id/editText1"
+            android:layout_margin="15dp"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Layout_Trending_Hospitals"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/TableLayout_Searchbox"
+        android:background="@color/background_cardview"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/tv_Top_Trending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Top trending ">
+        </TextView>
+
+            <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_recycler_view_Hospitals"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/tv_Top_Trending"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+             </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/background_cardview"
+        android:layout_below="@+id/Layout_Trending_Hospitals"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/tv_Top_Trending_Doctors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Top trending ">
+        </TextView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_recycler_view_Doctors"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/tv_Top_Trending_Doctors"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</RelativeLayout>
