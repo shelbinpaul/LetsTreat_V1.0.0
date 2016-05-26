@@ -1,11 +1,17 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeScreen">
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        tools:context=".HomeScreen">
 
     <RelativeLayout
-        android:id="@+id/TableLayout_Searchbox"
+        android:id="@+id/Layout_Searchbox"
         android:layout_width="match_parent"
         android:background="@color/background_cardview"
         android:layout_marginLeft="5dp"
@@ -39,11 +45,45 @@
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/Layout_Trending_All"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/Layout_Searchbox"
+        android:background="@color/background_cardview"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="50dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top hospitals at your area"
+            android:id="@+id/textview_TopAtYourArea"
+            android:layout_toRightOf="@+id/imageView_TopAtYourArea"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageView_TopAtYourArea"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/town_home" />
+
+        </RelativeLayout>
+
 
     <RelativeLayout
         android:id="@+id/Layout_Trending_Hospitals"
         android:layout_width="match_parent"
-        android:layout_below="@+id/TableLayout_Searchbox"
+        android:layout_below="@+id/Layout_Trending_All"
         android:background="@color/background_cardview"
         android:layout_marginLeft="5dp"
         android:layout_marginBottom="5dp"
@@ -94,5 +134,5 @@
             android:orientation="horizontal">
         </android.support.v7.widget.RecyclerView>
     </RelativeLayout>
-
-</RelativeLayout>
+</LinearLayout>
+</ScrollView>
