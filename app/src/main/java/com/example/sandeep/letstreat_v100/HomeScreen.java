@@ -45,9 +45,9 @@ public class HomeScreen extends AppCompatActivity {
         mEditText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeScreen.this,SearchList_Activity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.fade_in,R.anim.fade_in);
+//                Intent intent = new Intent(HomeScreen.this,SearchList_Activity.class);
+//                startActivity(intent);
+//                overridePendingTransition(R.anim.fade_in,R.anim.fade_in);
 
 
             }
